@@ -1,0 +1,34 @@
+<!-- Style -->
+<style>
+    table,
+    th,
+    td {
+        padding: 5px;
+        border: 1px solid black;
+    }
+</style>
+
+<h1>Modules</h1>
+
+<!-- MySQL Database - collegeDB.sql -->
+<table>
+    <!-- Headings -->
+    <tr>
+        <th>Module ID</th>
+        <th>Module Name</th>
+        <th>Credits</th>
+    </tr>
+<% modules.forEach((module) => { %>
+    <!-- Table Rows -->
+    <tr>
+        <td><%= module.mid %></td>
+        <td><%= module.name %></td>
+        <td><%= module.credits %></td>
+        <td><a href="/edit/<%= module.mid %>">Update</a></td>
+        
+    </tr>
+<% }) %>
+</table>
+
+<!-- Main Page -->
+<a href="/">Main Page</a>

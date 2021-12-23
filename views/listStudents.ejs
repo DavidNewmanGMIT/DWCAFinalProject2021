@@ -1,0 +1,39 @@
+<!-- Style -->
+<style>
+    table,
+    th,
+    td {
+        padding: 5px;
+        border: 1px solid black;
+    }
+</style>
+
+<h1>Students</h1>
+
+<!-- MySQL Database - collegeDB.sql -->
+<table>
+    <!-- Headings -->
+    <tr>
+        <th>Student ID</th>
+        <th>Student Name</th>
+        <th>GPA</th>
+    </tr>
+    <% students.forEach((student)=> { %>
+        <!-- Table Rows -->
+        <tr>
+            <td>
+                <%= student.sid %>
+            </td>
+            <td>
+                <%= student.name %>
+            </td>
+            <td>
+                <%= student.gpa %>
+            </td>
+
+        </tr>
+        <% }) %>
+</table>
+
+<!-- Main Page -->
+<a href="/">Main Page</a>
